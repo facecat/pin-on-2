@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8150" systemVersion="15A204g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8122"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -15,8 +16,30 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginBG" translatesAutoresizingMaskIntoConstraints="NO" id="Xd9-42-SWQ">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PIN-ON." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u2P-gP-x2u">
+                                <rect key="frame" x="215" y="265" width="170" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="170" id="LHc-XM-fUC"/>
+                                    <constraint firstAttribute="height" constant="70" id="yTO-YZ-B8X"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AcademyEngravedLetPlain" family="Academy Engraved LET" pointSize="43"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="u2P-gP-x2u" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="1eH-Wu-Hli"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="Xd9-42-SWQ" secondAttribute="bottom" id="QDG-f5-ktf"/>
+                            <constraint firstItem="u2P-gP-x2u" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="edJ-oi-Pe1"/>
+                            <constraint firstItem="Xd9-42-SWQ" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="kvr-oi-idM"/>
+                            <constraint firstItem="Xd9-42-SWQ" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="oDb-ln-ViA"/>
+                            <constraint firstAttribute="trailing" secondItem="Xd9-42-SWQ" secondAttribute="trailing" id="wl9-vQ-9q2"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -24,4 +47,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="loginBG" width="1280" height="853"/>
+    </resources>
 </document>
