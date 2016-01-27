@@ -1,0 +1,6 @@
+framework module Pods_pin_on_2 {
+  umbrella header "Pods-pin-on-2-umbrella.h"
+
+  export *
+  module * { export * }
+}

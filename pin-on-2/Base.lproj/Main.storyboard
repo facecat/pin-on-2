@@ -10,6 +10,12 @@
             <string>NotoSans-Bold</string>
             <string>NotoSans-Bold</string>
             <string>NotoSans-Bold</string>
+            <string>NotoSans-Bold</string>
+        </mutableArray>
+        <mutableArray key="NotoSans-Regular.ttf">
+            <string>NotoSans</string>
+            <string>NotoSans</string>
+            <string>NotoSans</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -28,54 +34,96 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginBG" translatesAutoresizingMaskIntoConstraints="NO" id="Ix0-Hm-NYg">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PIN-ON." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tgk-wG-VQY">
-                                <rect key="frame" x="215" y="265" width="170" height="70"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="50g-cM-5g4"/>
-                                    <constraint firstAttribute="width" constant="170" id="uHO-ty-nUF"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AcademyEngravedLetPlain" family="Academy Engraved LET" pointSize="43"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="电子邮件" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gxC-MA-b9p">
-                                <rect key="frame" x="150" y="343" width="300" height="40"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="jlA-rd-sJn"/>
-                                    <constraint firstAttribute="height" constant="40" id="rWu-NY-DDb"/>
-                                </constraints>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="密码" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hFD-5A-mZ6">
-                                <rect key="frame" x="150" y="391" width="300" height="40"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IDp-bh-OJO">
-                                <rect key="frame" x="150" y="461" width="300" height="40"/>
-                                <color key="backgroundColor" red="0.14901960784313725" green="0.65098039215686276" blue="0.60392156862745094" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="18"/>
-                                <state key="normal" title="登 陆">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ksY-zn-XBQ">
-                                <rect key="frame" x="263" y="511" width="75" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="3jg-5U-4Xw"/>
-                                    <constraint firstAttribute="width" constant="75" id="Net-HD-3ab"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="15"/>
-                                <state key="normal" title="忘记密码？">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tuh-oB-Ei9">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="FIW-an-bNB">
+                                <rect key="frame" x="150" y="167" width="300" height="266"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PIN-ON." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tgk-wG-VQY">
+                                        <rect key="frame" x="65" y="0.0" width="170" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="50g-cM-5g4"/>
+                                            <constraint firstAttribute="width" constant="170" id="uHO-ty-nUF"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AcademyEngravedLetPlain" family="Academy Engraved LET" pointSize="43"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PUZ-2y-LIv" customClass="MaterialView" customModule="pin_on_2" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="85" width="300" height="81"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="oJe-bR-zzW">
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="81"/>
+                                                <subviews>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="电子邮件" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gxC-MA-b9p" customClass="MaterialTextField" customModule="pin_on_2" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="300" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="300" id="jlA-rd-sJn"/>
+                                                            <constraint firstAttribute="height" constant="40" id="rWu-NY-DDb"/>
+                                                        </constraints>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
+                                                    </textField>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q70-Ih-g8g">
+                                                        <rect key="frame" x="0.0" y="40" width="300" height="1"/>
+                                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="1" id="2u6-1L-jEe"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="密码" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hFD-5A-mZ6" customClass="MaterialTextField" customModule="pin_on_2" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="41" width="300" height="40"/>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                    </textField>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="Q70-Ih-g8g" firstAttribute="width" secondItem="gxC-MA-b9p" secondAttribute="width" id="3kd-dl-UlF"/>
+                                                    <constraint firstItem="hFD-5A-mZ6" firstAttribute="height" secondItem="gxC-MA-b9p" secondAttribute="height" id="YvC-vA-6ye"/>
+                                                    <constraint firstItem="hFD-5A-mZ6" firstAttribute="width" secondItem="gxC-MA-b9p" secondAttribute="width" id="dGO-r7-gWn"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="oJe-bR-zzW" firstAttribute="centerX" secondItem="PUZ-2y-LIv" secondAttribute="centerX" id="HFH-xn-hD6"/>
+                                            <constraint firstItem="oJe-bR-zzW" firstAttribute="centerY" secondItem="PUZ-2y-LIv" secondAttribute="centerY" id="QHB-Tk-ngF"/>
+                                            <constraint firstAttribute="height" constant="81" id="SgT-rX-rhL"/>
+                                            <constraint firstAttribute="width" constant="300" id="zcI-LW-Gdw"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IDp-bh-OJO" customClass="MaterialButton" customModule="pin_on_2" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="181" width="300" height="40"/>
+                                        <color key="backgroundColor" red="0.14901960784313725" green="0.65098039215686276" blue="0.60392156862745094" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="esz-II-zuS"/>
+                                            <constraint firstAttribute="width" constant="300" id="ltM-ls-xGl"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="18"/>
+                                        <state key="normal" title="登 陆">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnLoginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cil-u9-IZt"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ksY-zn-XBQ">
+                                        <rect key="frame" x="113" y="236" width="75" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="3jg-5U-4Xw"/>
+                                            <constraint firstAttribute="width" constant="75" id="Net-HD-3ab"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="15"/>
+                                        <state key="normal" title="忘记密码？">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnResetPasswordPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8hA-Eo-0zU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tuh-oB-Ei9" customClass="MaterialButton" customModule="pin_on_2" customModuleProvider="target">
                                 <rect key="frame" x="510" y="28" width="70" height="35"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -86,42 +134,203 @@
                                 <state key="normal" title="注册">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnSignupPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pAZ-Co-yyb"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="hFD-5A-mZ6" firstAttribute="height" secondItem="gxC-MA-b9p" secondAttribute="height" id="8Xa-nv-ECM"/>
+                            <constraint firstItem="FIW-an-bNB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="22F-xG-z48"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ix0-Hm-NYg" secondAttribute="bottom" id="8ip-k8-p1l"/>
                             <constraint firstItem="Ix0-Hm-NYg" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="8k2-fw-gIa"/>
-                            <constraint firstItem="hFD-5A-mZ6" firstAttribute="centerX" secondItem="gxC-MA-b9p" secondAttribute="centerX" id="B2U-S5-h18"/>
-                            <constraint firstItem="IDp-bh-OJO" firstAttribute="centerX" secondItem="hFD-5A-mZ6" secondAttribute="centerX" id="BIG-Pv-FIl"/>
-                            <constraint firstItem="ksY-zn-XBQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="C9H-hH-ZKw"/>
                             <constraint firstItem="Ix0-Hm-NYg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="EWJ-hx-lBs"/>
-                            <constraint firstItem="Tgk-wG-VQY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ING-rs-MHY"/>
+                            <constraint firstItem="FIW-an-bNB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="FTV-dt-uh4"/>
                             <constraint firstAttribute="trailing" secondItem="Ix0-Hm-NYg" secondAttribute="trailing" id="JaV-qL-1I0"/>
-                            <constraint firstItem="hFD-5A-mZ6" firstAttribute="width" secondItem="gxC-MA-b9p" secondAttribute="width" id="L4o-1F-W47"/>
-                            <constraint firstItem="gxC-MA-b9p" firstAttribute="top" secondItem="Tgk-wG-VQY" secondAttribute="bottom" constant="8" id="VNs-vC-XEC"/>
-                            <constraint firstItem="IDp-bh-OJO" firstAttribute="top" secondItem="hFD-5A-mZ6" secondAttribute="bottom" constant="30" id="Va5-l9-EAV"/>
-                            <constraint firstItem="Tgk-wG-VQY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="WgU-96-uhU"/>
-                            <constraint firstItem="IDp-bh-OJO" firstAttribute="width" secondItem="hFD-5A-mZ6" secondAttribute="width" id="XAA-YW-Y6P"/>
-                            <constraint firstItem="IDp-bh-OJO" firstAttribute="height" secondItem="hFD-5A-mZ6" secondAttribute="height" id="aQt-r2-tvv"/>
-                            <constraint firstItem="gxC-MA-b9p" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cVb-em-txi"/>
                             <constraint firstItem="tuh-oB-Ei9" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="fc8-06-IOq"/>
                             <constraint firstItem="tuh-oB-Ei9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="jAb-sO-vxh"/>
-                            <constraint firstItem="ksY-zn-XBQ" firstAttribute="top" secondItem="IDp-bh-OJO" secondAttribute="bottom" constant="10" id="mbk-kL-QPj"/>
-                            <constraint firstItem="hFD-5A-mZ6" firstAttribute="top" secondItem="gxC-MA-b9p" secondAttribute="bottom" constant="8" id="tH5-nJ-hoo"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="emailTextField" destination="gxC-MA-b9p" id="uJP-ON-8fG"/>
                         <outlet property="loginBackgroundImg" destination="Ix0-Hm-NYg" id="u0T-OI-V9a"/>
+                        <outlet property="passwordTextField" destination="hFD-5A-mZ6" id="Dfk-Wo-fIz"/>
+                        <segue destination="bDT-GL-ZxN" kind="show" identifier="SignupVC" id="cm5-59-1b6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="243" y="339"/>
+            <point key="canvasLocation" x="322" y="339"/>
+        </scene>
+        <!--SignupVC-->
+        <scene sceneID="mRg-Zz-eP3">
+            <objects>
+                <viewController id="bDT-GL-ZxN" customClass="SignupVC" customModule="pin_on_2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DQ2-YJ-hz8"/>
+                        <viewControllerLayoutGuide type="bottom" id="rTF-Y0-qbD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AyA-R7-fm3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="signupBG" translatesAutoresizingMaskIntoConstraints="NO" id="h7h-ZD-OVp">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="bdD-fl-QOS">
+                                <rect key="frame" x="150" y="154" width="300" height="292"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="-12" translatesAutoresizingMaskIntoConstraints="NO" id="Dzm-T4-G9O">
+                                        <rect key="frame" x="65" y="0.0" width="170" height="100"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PIN-ON." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="suQ-Lo-aVc">
+                                                <rect key="frame" x="0.0" y="0.0" width="170" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="70" id="Gz5-U6-ItB"/>
+                                                    <constraint firstAttribute="width" constant="170" id="wyn-BX-jfT"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AcademyEngravedLetPlain" family="Academy Engraved LET" pointSize="43"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="nTR-cg-Bna">
+                                                <rect key="frame" x="17" y="58" width="135" height="42"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="关注你听说的博客。" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="203-Zc-s5z">
+                                                        <rect key="frame" x="0.0" y="0.0" width="135" height="20.5"/>
+                                                        <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="15"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="分享你喜爱的东西。" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sLU-Ma-PG2">
+                                                        <rect key="frame" x="0.0" y="21" width="135" height="20.5"/>
+                                                        <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="15"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pll-R0-fNG" customClass="MaterialView" customModule="pin_on_2" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="115" width="300" height="122"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Zv7-3H-Mto">
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="122"/>
+                                                <subviews>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="电子邮件" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="No7-gg-nht" customClass="MaterialTextField" customModule="pin_on_2" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="300" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="X4H-DR-GxU"/>
+                                                            <constraint firstAttribute="width" constant="300" id="sTi-HI-hcM"/>
+                                                        </constraints>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
+                                                    </textField>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qGz-EI-FaQ">
+                                                        <rect key="frame" x="0.0" y="40" width="300" height="1"/>
+                                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="1" id="sek-GP-XxK"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="密码" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FlO-tR-JE1" customClass="MaterialTextField" customModule="pin_on_2" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="41" width="300" height="40"/>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                    </textField>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jse-Qj-gqd">
+                                                        <rect key="frame" x="0.0" y="81" width="300" height="1"/>
+                                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="1" id="KP1-NI-OvF"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="用户名" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VbT-SA-sYL" userLabel="用户名" customClass="MaterialTextField" customModule="pin_on_2" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="82" width="300" height="40"/>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="VbT-SA-sYL" firstAttribute="width" secondItem="FlO-tR-JE1" secondAttribute="width" id="0dZ-xL-1tY"/>
+                                                    <constraint firstItem="VbT-SA-sYL" firstAttribute="height" secondItem="FlO-tR-JE1" secondAttribute="height" id="9fI-OB-dmP"/>
+                                                    <constraint firstItem="FlO-tR-JE1" firstAttribute="width" secondItem="No7-gg-nht" secondAttribute="width" id="I2e-03-Uab"/>
+                                                    <constraint firstItem="FlO-tR-JE1" firstAttribute="height" secondItem="No7-gg-nht" secondAttribute="height" id="bHW-dQ-QVx"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="E3S-GP-bkc"/>
+                                            <constraint firstItem="Zv7-3H-Mto" firstAttribute="centerX" secondItem="Pll-R0-fNG" secondAttribute="centerX" id="I0f-uk-4Fd"/>
+                                            <constraint firstItem="Zv7-3H-Mto" firstAttribute="centerY" secondItem="Pll-R0-fNG" secondAttribute="centerY" id="IGn-z3-0hl"/>
+                                            <constraint firstAttribute="height" constant="122" id="KQ6-Ax-uAe"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0LE-H7-zll" customClass="MaterialButton" customModule="pin_on_2" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="252" width="300" height="40"/>
+                                        <color key="backgroundColor" red="0.14901960780000001" green="0.65098039220000004" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="BWR-z0-zFG"/>
+                                            <constraint firstAttribute="width" constant="300" id="nUj-nh-oJu"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="18"/>
+                                        <state key="normal" title="注 册">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnConfirmSignupPressed:" destination="bDT-GL-ZxN" eventType="touchUpInside" id="DTE-Ww-DBX"/>
+                                            <action selector="btnLoginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jMo-Mv-2cU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bVa-mO-MCw" customClass="MaterialButton" customModule="pin_on_2" customModuleProvider="target">
+                                <rect key="frame" x="510" y="28" width="70" height="35"/>
+                                <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="glZ-Zg-5Jn"/>
+                                    <constraint firstAttribute="width" constant="70" id="mhx-Us-EGh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="14"/>
+                                <state key="normal" title="登陆">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnCancelSignupPressed:" destination="bDT-GL-ZxN" eventType="touchUpInside" id="ifl-1B-uAP"/>
+                                    <action selector="btnSignupPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6xh-Hn-FBW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="h7h-ZD-OVp" firstAttribute="top" secondItem="AyA-R7-fm3" secondAttribute="top" id="DZr-OE-8Ug"/>
+                            <constraint firstItem="h7h-ZD-OVp" firstAttribute="leading" secondItem="AyA-R7-fm3" secondAttribute="leading" id="I2M-7d-9Ab"/>
+                            <constraint firstItem="bdD-fl-QOS" firstAttribute="centerY" secondItem="AyA-R7-fm3" secondAttribute="centerY" id="W5e-EN-OXw"/>
+                            <constraint firstAttribute="trailing" secondItem="h7h-ZD-OVp" secondAttribute="trailing" id="XGT-3m-a2b"/>
+                            <constraint firstItem="rTF-Y0-qbD" firstAttribute="top" secondItem="h7h-ZD-OVp" secondAttribute="bottom" id="rfO-w1-fqY"/>
+                            <constraint firstItem="bdD-fl-QOS" firstAttribute="centerX" secondItem="AyA-R7-fm3" secondAttribute="centerX" id="uFj-BP-4dq"/>
+                            <constraint firstItem="bVa-mO-MCw" firstAttribute="top" secondItem="DQ2-YJ-hz8" secondAttribute="bottom" constant="8" id="uTt-u9-aun"/>
+                            <constraint firstItem="bVa-mO-MCw" firstAttribute="trailing" secondItem="AyA-R7-fm3" secondAttribute="trailingMargin" id="yNO-Vg-sMg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="txtSignupEmail" destination="No7-gg-nht" id="BaK-te-Vd9"/>
+                        <outlet property="txtSignupPassword" destination="FlO-tR-JE1" id="x6L-B7-P4O"/>
+                        <outlet property="txtSignupUsername" destination="VbT-SA-sYL" id="hMX-cP-lMe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8S9-IW-IlT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1049" y="339"/>
         </scene>
     </scenes>
     <resources>
         <image name="loginBG" width="1280" height="853"/>
+        <image name="signupBG" width="1280" height="1280"/>
     </resources>
 </document>
