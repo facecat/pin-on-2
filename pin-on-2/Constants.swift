@@ -16,3 +16,7 @@ let COLOR_SHADOW: CGFloat = 46.0 / 256.0
 let KEY_UID = "uid"
 let KEY_USER_NAME = "username"
 let KEY_PROVIDER = "provider"
+
+//Segues
+let SEGUE_SIGN_UP = "SignupVC"
+let SEGUE_LOG_IN = "LoginVC"

@@ -38,15 +38,16 @@ class SignupVC: UIViewController {
                 DataService.ds.REF_ROOT.createUser(email, password: psw, withValueCompletionBlock: { (err: NSError!, data: [NSObject : AnyObject]!) -> Void in
                     
                     if let uid = data[KEY_UID] as? String {
-                        print("uid: \(uid)")
-                        
                         DataService.ds.REF_ROOT.authUser(email, password: psw, withCompletionBlock: { (err: NSError!, authData: FAuthData!) -> Void in
                             if err != nil {
                                 
                             } else {
-                                let userRef = DataService.ds.REF_USERS.childByAppendingPath(uid)
-                                print("\(userRef)")
-                                userRef.setValue(username, forKey: KEY_USER_NAME)
+                                //the key-value data need to be stored
+                                let newuser = [KEY_USER_NAME: "\(username)", KEY_PROVIDER: authData.provider]
+                                DataService.ds.REF_USERS.childByAppendingPath(uid).setValue(newuser)
+                                
+                                //store uid locally
+                                NSUserDefaults.standardUserDefaults().setValue(uid, forKey: KEY_UID)
                             }
                         })
                         
