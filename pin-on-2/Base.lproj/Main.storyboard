@@ -156,6 +156,7 @@
                         <outlet property="loginBackgroundImg" destination="Ix0-Hm-NYg" id="u0T-OI-V9a"/>
                         <outlet property="passwordTextField" destination="hFD-5A-mZ6" id="Dfk-Wo-fIz"/>
                         <segue destination="bDT-GL-ZxN" kind="show" identifier="SignupVC" id="cm5-59-1b6"/>
+                        <segue destination="6Sa-6g-u9c" kind="show" identifier="LoginTBVC" id="BPu-cg-uG3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -194,7 +195,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="nTR-cg-Bna">
-                                                <rect key="frame" x="17" y="58" width="135" height="42"/>
+                                                <rect key="frame" x="17.5" y="58" width="135" height="42"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="关注你听说的博客。" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="203-Zc-s5z">
                                                         <rect key="frame" x="0.0" y="0.0" width="135" height="20.5"/>
@@ -203,7 +204,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="分享你喜爱的东西。" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sLU-Ma-PG2">
-                                                        <rect key="frame" x="0.0" y="21" width="135" height="20.5"/>
+                                                        <rect key="frame" x="0.0" y="21.5" width="135" height="20.5"/>
                                                         <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="15"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
@@ -326,10 +327,155 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8S9-IW-IlT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1049" y="339"/>
+            <point key="canvasLocation" x="1061" y="-411"/>
+        </scene>
+        <!--search-->
+        <scene sceneID="p4T-y3-UOH">
+            <objects>
+                <viewController id="CgX-OA-uTd" userLabel="search" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Z8m-5U-uas"/>
+                        <viewControllerLayoutGuide type="bottom" id="81i-gP-C5M"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CMW-9R-1Pk">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.16078431372549021" green="0.20784313725490197" blue="0.29411764705882354" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="recents" id="OWG-QG-g20" userLabel="search"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qry-I9-bY1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1881" y="669"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="uet-t4-W4n">
+            <objects>
+                <viewController id="Cy7-RT-FJs" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="a1A-8b-Baz"/>
+                        <viewControllerLayoutGuide type="bottom" id="knX-SZ-ETJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CMD-IM-rxL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="orb-kZ-3rr" userLabel="search container">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jOd-lI-ajy">
+                                        <rect key="frame" x="8" y="8" width="584" height="34"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="P" translatesAutoresizingMaskIntoConstraints="NO" id="FYs-Hy-WR4">
+                                                <rect key="frame" x="0.0" y="0.0" width="34" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="34" id="2rz-bM-xCx"/>
+                                                    <constraint firstAttribute="height" constant="34" id="wFd-Jm-CXi"/>
+                                                </constraints>
+                                            </imageView>
+                                            <searchBar contentMode="redraw" barStyle="blackTranslucent" text="" placeholder="搜索 PIN-ON" translatesAutoresizingMaskIntoConstraints="NO" id="lhD-RP-HH7">
+                                                <rect key="frame" x="34" y="0.0" width="550" height="34"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="550" id="NHR-b8-uCy"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <color key="barTintColor" red="0.1215686275" green="0.16078431369999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </searchBar>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.16078431372549021" green="0.20784313725490197" blue="0.29411764705882354" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="jOd-lI-ajy" firstAttribute="top" secondItem="orb-kZ-3rr" secondAttribute="top" constant="8" id="Kei-fx-z8b"/>
+                                    <constraint firstItem="jOd-lI-ajy" firstAttribute="leading" secondItem="orb-kZ-3rr" secondAttribute="leading" constant="8" id="Pg3-XT-y28"/>
+                                    <constraint firstAttribute="height" constant="50" id="Ygi-CR-R8S"/>
+                                    <constraint firstAttribute="trailing" secondItem="jOd-lI-ajy" secondAttribute="trailing" constant="8" id="bcu-MI-koa"/>
+                                    <constraint firstAttribute="bottom" secondItem="jOd-lI-ajy" secondAttribute="bottom" constant="8" id="q1W-5O-b7Y"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5kk-5s-UWT" userLabel="user btn container">
+                                <rect key="frame" x="20" y="58" width="560" height="67"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fV5-Ya-yWC">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="67"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="head2" translatesAutoresizingMaskIntoConstraints="NO" id="7vG-qW-jon">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="4mo-2N-CBT"/>
+                                                    <constraint firstAttribute="width" constant="34" id="pZe-KJ-Rbv"/>
+                                                    <constraint firstAttribute="width" constant="50" id="tZv-Ph-acW"/>
+                                                    <constraint firstAttribute="height" constant="34" id="zdu-ar-v9o"/>
+                                                </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="pZe-KJ-Rbv"/>
+                                                        <exclude reference="zdu-ar-v9o"/>
+                                                    </mask>
+                                                </variation>
+                                            </imageView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g8v-br-4bm" customClass="MaterialView" customModule="pin_on_2" customModuleProvider="target">
+                                                <rect key="frame" x="58" y="0.0" width="502" height="67"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="67" id="xNC-g4-Z8u"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="fV5-Ya-yWC" firstAttribute="top" secondItem="5kk-5s-UWT" secondAttribute="top" id="HTc-F0-Q8t"/>
+                                    <constraint firstAttribute="height" constant="67" id="XQt-XN-ol6"/>
+                                    <constraint firstAttribute="bottom" secondItem="fV5-Ya-yWC" secondAttribute="bottom" id="rEe-W1-UI8"/>
+                                    <constraint firstAttribute="trailing" secondItem="fV5-Ya-yWC" secondAttribute="trailing" id="rHy-o9-5g6"/>
+                                    <constraint firstItem="fV5-Ya-yWC" firstAttribute="leading" secondItem="5kk-5s-UWT" secondAttribute="leading" id="z0w-HB-kB8"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.16078431369999999" green="0.20784313730000001" blue="0.29411764709999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="5kk-5s-UWT" firstAttribute="top" secondItem="orb-kZ-3rr" secondAttribute="bottom" constant="8" id="MZD-Ow-dSM"/>
+                            <constraint firstItem="orb-kZ-3rr" firstAttribute="top" secondItem="CMD-IM-rxL" secondAttribute="top" id="Twn-AP-dR2"/>
+                            <constraint firstItem="orb-kZ-3rr" firstAttribute="leading" secondItem="CMD-IM-rxL" secondAttribute="leading" id="gqN-Sd-JTd"/>
+                            <constraint firstAttribute="trailing" secondItem="orb-kZ-3rr" secondAttribute="trailing" id="lTc-Fb-j37"/>
+                            <constraint firstItem="5kk-5s-UWT" firstAttribute="leading" secondItem="CMD-IM-rxL" secondAttribute="leadingMargin" id="uCS-gg-YNb"/>
+                            <constraint firstItem="5kk-5s-UWT" firstAttribute="trailing" secondItem="CMD-IM-rxL" secondAttribute="trailingMargin" id="xGg-5q-g5x"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="QZS-S6-rL0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wVf-2U-75X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1890" y="22"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="7ub-fA-bPj">
+            <objects>
+                <tabBarController id="6Sa-6g-u9c" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="ve0-Ni-mAE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.1215686275" green="0.16078431369999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.16078431369999999" green="0.20784313730000001" blue="0.29411764709999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" red="0.1215686275" green="0.16078431369999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Cy7-RT-FJs" kind="relationship" relationship="viewControllers" id="GMj-1M-Ggj"/>
+                        <segue destination="CgX-OA-uTd" kind="relationship" relationship="viewControllers" id="qgC-Zg-GLq"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Icg-KK-78H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1061" y="339"/>
         </scene>
     </scenes>
     <resources>
+        <image name="P" width="500" height="500"/>
+        <image name="head2" width="200" height="200"/>
         <image name="loginBG" width="1280" height="853"/>
         <image name="signupBG" width="1280" height="1280"/>
     </resources>

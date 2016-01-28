@@ -19,4 +19,4 @@ let KEY_PROVIDER = "provider"
 
 //Segues
 let SEGUE_SIGN_UP = "SignupVC"
-let SEGUE_LOG_IN = "LoginVC"
+let SEGUE_LOG_IN = "LoginTBVC"

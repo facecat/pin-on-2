@@ -16,11 +16,12 @@ class MaterialView: UIView {
         //button 加圆角
         layer.cornerRadius =  4.0
         
+        /*
         //button 加阴影
         layer.shadowColor = UIColor(red: COLOR_SHADOW, green: COLOR_SHADOW, blue: COLOR_SHADOW, alpha: 8.0).CGColor
         layer.shadowOffset = CGSizeMake(0.0, 2.0)
         layer.shadowRadius =  5.0
         layer.shadowOpacity = 0.8
-
+        */
     }
 }
