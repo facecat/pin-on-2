@@ -20,3 +20,6 @@ let KEY_PROVIDER = "provider"
 //Segues
 let SEGUE_SIGN_UP = "SignupVC"
 let SEGUE_LOG_IN = "LoginTBVC"
+
+//Cell Id
+let PIN_ON_POST_CELL = "PinOnPostCell"

@@ -22,6 +22,9 @@
 		92A34E241C57E0EB00B734A2 /* NotoSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92A34E201C57E0EB00B734A2 /* NotoSans-BoldItalic.ttf */; };
 		92A34E251C57E0EB00B734A2 /* NotoSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92A34E211C57E0EB00B734A2 /* NotoSans-Italic.ttf */; };
 		92A34E261C57E0EB00B734A2 /* NotoSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92A34E221C57E0EB00B734A2 /* NotoSans-Regular.ttf */; };
+		92BC37CD1C5D15D30011924F /* PostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BC37CC1C5D15D30011924F /* PostVC.swift */; };
+		92BC37CF1C5D16DC0011924F /* PinOnPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BC37CE1C5D16DC0011924F /* PinOnPost.swift */; };
+		92BC37D11C5D18550011924F /* PinOnPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BC37D01C5D18550011924F /* PinOnPostCell.swift */; };
 		C4C301E653B2F7881D71F0B5 /* Pods_pin_on_2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15D9B78533A4F22EA104F696 /* Pods_pin_on_2.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +47,9 @@
 		92A34E201C57E0EB00B734A2 /* NotoSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-BoldItalic.ttf"; sourceTree = "<group>"; };
 		92A34E211C57E0EB00B734A2 /* NotoSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Italic.ttf"; sourceTree = "<group>"; };
 		92A34E221C57E0EB00B734A2 /* NotoSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Regular.ttf"; sourceTree = "<group>"; };
+		92BC37CC1C5D15D30011924F /* PostVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostVC.swift; sourceTree = "<group>"; };
+		92BC37CE1C5D16DC0011924F /* PinOnPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinOnPost.swift; sourceTree = "<group>"; };
+		92BC37D01C5D18550011924F /* PinOnPostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinOnPostCell.swift; sourceTree = "<group>"; };
 		97F72FE103306D0E3AD85024 /* Pods-pin-on-2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pin-on-2.release.xcconfig"; path = "Pods/Target Support Files/Pods-pin-on-2/Pods-pin-on-2.release.xcconfig"; sourceTree = "<group>"; };
 		9C21D70F2139C87FAC11FA9E /* Pods-pin-on-2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pin-on-2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pin-on-2/Pods-pin-on-2.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -104,6 +110,7 @@
 		92A34E191C57C14100B734A2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				92BC37CE1C5D16DC0011924F /* PinOnPost.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -114,6 +121,7 @@
 				921A87D51C58FE0800D62352 /* MaterialButton.swift */,
 				921A87D71C59000F00D62352 /* MaterialView.swift */,
 				921A87D91C59011E00D62352 /* MaterialTextField.swift */,
+				92BC37D01C5D18550011924F /* PinOnPostCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -123,6 +131,7 @@
 			children = (
 				92A34E091C57C13500B734A2 /* ViewController.swift */,
 				921A87E11C5929F300D62352 /* SignupVC.swift */,
+				92BC37CC1C5D15D30011924F /* PostVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -293,12 +302,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92BC37CF1C5D16DC0011924F /* PinOnPost.swift in Sources */,
 				921A87E21C5929F300D62352 /* SignupVC.swift in Sources */,
 				92A34E0A1C57C13500B734A2 /* ViewController.swift in Sources */,
 				921A87E01C591AE400D62352 /* DataService.swift in Sources */,
 				92A34E081C57C13500B734A2 /* AppDelegate.swift in Sources */,
+				92BC37D11C5D18550011924F /* PinOnPostCell.swift in Sources */,
 				921A87DA1C59011E00D62352 /* MaterialTextField.swift in Sources */,
 				921A87D61C58FE0800D62352 /* MaterialButton.swift in Sources */,
+				92BC37CD1C5D15D30011924F /* PostVC.swift in Sources */,
 				921A87D81C59000F00D62352 /* MaterialView.swift in Sources */,
 				921A87DC1C5905D100D62352 /* Constants.swift in Sources */,
 			);
