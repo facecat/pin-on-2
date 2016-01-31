@@ -14,6 +14,12 @@ class PostVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableview: UITableView!
     
+    //make-post text & image
+    @IBOutlet weak var txtMakePost: UITextField!
+    @IBOutlet weak var imgMakePost: UIImageView!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,12 +38,6 @@ class PostVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-//        if let cell = tableview.dequeueReusableCellWithIdentifier(PIN_ON_POST_CELL) as? PinOnPostCell {
-//            cell.configureCell(posts[indexPath.row])
-//            return cell
-//        } else {
-//            return PinOnPostCell()
-//        }
         return tableview.dequeueReusableCellWithIdentifier(PIN_ON_POST_CELL)!
     }
 }

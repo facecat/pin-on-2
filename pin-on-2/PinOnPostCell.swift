@@ -15,6 +15,7 @@ class PinOnPostCell: UITableViewCell {
     @IBOutlet weak var postImg: UIImageView!
     @IBOutlet weak var txtPostDesc: UITextView!
     @IBOutlet weak var lblLikes: UILabel!
+    @IBOutlet weak var heartImg: UIImageView!
     
     
     override func awakeFromNib() {
@@ -23,7 +24,17 @@ class PinOnPostCell: UITableViewCell {
     
     }
 
-    func configureCell(post: PinOnPost) {
+    //make a post with an image.
+    func configureImgCell(post: PinOnPost) {
+        lblUserName.text = post.userName
+        
+        //show likes label where more than 1 likes there.
+        if  post.likesNum  > 0 {
+            lblLikes.text = "\(post.likesNum)热度"
+        } else  {
+            lblLikes.text = ""
+        }
+        
         
     }
     

@@ -14,6 +14,11 @@ class PinOnPost {
     private var _postDescription: String!
     private var _postImg: String?
     private var _userImg: String!
+    private var _likesNum: Int!
+    
+    var likesNum: Int {
+        return _likesNum
+    }
     
     var userName: String {
         return _userName
