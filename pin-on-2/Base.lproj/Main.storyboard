@@ -351,7 +351,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pin-On." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ge1-Yx-4pn">
-                                        <rect key="frame" x="245.5" y="15" width="109.5" height="39.5"/>
+                                        <rect key="frame" x="245" y="15" width="109.5" height="39.5"/>
                                         <fontDescription key="fontDescription" name="AcademyEngravedLetPlain" family="Academy Engraved LET" pointSize="33"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -378,7 +378,7 @@
             </objects>
             <point key="canvasLocation" x="1890" y="686"/>
         </scene>
-        <!--PostVC-->
+        <!--Po-->
         <scene sceneID="uet-t4-W4n">
             <objects>
                 <viewController id="Cy7-RT-FJs" customClass="PostVC" customModule="pin_on_2" customModuleProvider="target" sceneMemberID="viewController">
@@ -394,7 +394,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pin-On." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="55N-Wy-K8l">
-                                        <rect key="frame" x="245.5" y="15" width="109.5" height="39.5"/>
+                                        <rect key="frame" x="245" y="15" width="109.5" height="39.5"/>
                                         <fontDescription key="fontDescription" name="AcademyEngravedLetPlain" family="Academy Engraved LET" pointSize="33"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -670,7 +670,7 @@
                             <constraint firstItem="5kk-5s-UWT" firstAttribute="trailing" secondItem="CMD-IM-rxL" secondAttribute="trailing" constant="-8" id="xGg-5q-g5x"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="favorites" id="QZS-S6-rL0"/>
+                    <tabBarItem key="tabBarItem" title="Po" image="photo-unselected" selectedImage="photo-selected" id="QZS-S6-rL0" userLabel="Po"/>
                     <connections>
                         <outlet property="imgMakePost" destination="cLr-LG-fa9" id="pjS-oW-EpV"/>
                         <outlet property="tableview" destination="lsF-5j-g7a" id="QpB-qN-7Dp"/>
@@ -685,10 +685,12 @@
         <scene sceneID="7ub-fA-bPj">
             <objects>
                 <tabBarController id="6Sa-6g-u9c" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="ve0-Ni-mAE">
+                    <tabBar key="tabBar" contentMode="scaleAspectFit" barStyle="black" id="ve0-Ni-mAE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.1215686275" green="0.16078431369999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.16078431369999999" green="0.20784313730000001" blue="0.29411764709999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
                         <segue destination="Cy7-RT-FJs" kind="relationship" relationship="viewControllers" id="GMj-1M-Ggj"/>
@@ -707,6 +709,8 @@
         <image name="loginBG" width="1280" height="853"/>
         <image name="more" width="700" height="700"/>
         <image name="photo" width="1200" height="1200"/>
+        <image name="photo-selected" width="38" height="38"/>
+        <image name="photo-unselected" width="38" height="38"/>
         <image name="signupBG" width="1280" height="1280"/>
     </resources>
 </document>
