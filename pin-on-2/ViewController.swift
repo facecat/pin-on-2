@@ -38,7 +38,7 @@ class ViewController: UIViewController {
                 if error != nil {
                     print("\(error.code)")
                 } else {
-                    
+                    print("user login success")
                 }
             })
         } else {
@@ -51,7 +51,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func btnResetPasswordPressed(sender: UIButton!) {
-    
+        print("user forgot password")
     }
     
 

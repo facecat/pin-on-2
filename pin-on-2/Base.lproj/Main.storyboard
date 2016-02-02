@@ -372,7 +372,7 @@
                             <constraint firstItem="brq-PN-jVj" firstAttribute="top" secondItem="CMW-9R-1Pk" secondAttribute="top" id="jRS-0L-rGa"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="recents" id="OWG-QG-g20" userLabel="search"/>
+                    <tabBarItem key="tabBarItem" selectedImage="photo-selected" systemItem="search" id="OWG-QG-g20" userLabel="search"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qry-I9-bY1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -448,7 +448,7 @@
                                                         <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" translatesAutoresizingMaskIntoConstraints="NO" id="cLr-LG-fa9">
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="more" translatesAutoresizingMaskIntoConstraints="NO" id="cLr-LG-fa9">
                                                         <rect key="frame" x="376" y="0.0" width="68" height="67"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="68" id="CXJ-7H-ec7"/>
@@ -573,8 +573,8 @@
                                                                                         </mask>
                                                                                     </variation>
                                                                                 </label>
-                                                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hUN-eK-hlr">
-                                                                                    <rect key="frame" x="450" y="0.0" width="68" height="30"/>
+                                                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="hUN-eK-hlr">
+                                                                                    <rect key="frame" x="456" y="0.0" width="62" height="30"/>
                                                                                     <subviews>
                                                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart-empty" translatesAutoresizingMaskIntoConstraints="NO" id="hdh-CE-xWB">
                                                                                             <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
@@ -584,7 +584,7 @@
                                                                                             </constraints>
                                                                                         </imageView>
                                                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="more" translatesAutoresizingMaskIntoConstraints="NO" id="70d-8a-Yd4">
-                                                                                            <rect key="frame" x="38" y="0.0" width="30" height="30"/>
+                                                                                            <rect key="frame" x="32" y="0.0" width="30" height="30"/>
                                                                                             <constraints>
                                                                                                 <constraint firstAttribute="height" constant="30" id="CKH-Ec-3FQ"/>
                                                                                                 <constraint firstAttribute="width" constant="30" id="Vfx-TR-ANf"/>
@@ -708,7 +708,6 @@
         <image name="heart-empty" width="700" height="700"/>
         <image name="loginBG" width="1280" height="853"/>
         <image name="more" width="700" height="700"/>
-        <image name="photo" width="1200" height="1200"/>
         <image name="photo-selected" width="38" height="38"/>
         <image name="photo-unselected" width="38" height="38"/>
         <image name="signupBG" width="1280" height="1280"/>

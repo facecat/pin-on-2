@@ -42,7 +42,7 @@ class SignupVC: UIViewController {
                             if err != nil {
                                 
                             } else {
-                                //the key-value data need to be stored
+                                //the key-value data need to be stored     
                                 let newuser = [KEY_USER_NAME: "\(username)", KEY_PROVIDER: authData.provider]
                                 DataService.ds.REF_USERS.childByAppendingPath(uid).setValue(newuser)
                                 
