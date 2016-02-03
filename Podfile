@@ -5,5 +5,6 @@ use_frameworks!
 
 target 'pin-on-2' do
 pod 'Firebase', '>= 2.5.0'
+pod 'Alamofire', '~> 3.0'
 end
 

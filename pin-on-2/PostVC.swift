@@ -8,10 +8,12 @@
 
 import UIKit
 import Firebase
+import Alamofire
 
 class PostVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     var posts = [PinOnPost]()
+    static var imageCache = NSCache()
     
     @IBOutlet weak var tableview: UITableView!
     
@@ -57,15 +59,24 @@ class PostVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        print(posts[indexPath.row].postDescription)
+        let po = posts[indexPath.row]
         
-//        if let cell = tableView.dequeueReusableCellWithIdentifier(PIN_ON_POST_CELL) as? PinOnPostCell {
-//            cell.configureImgCell(posts[indexPath.row])
-//            return cell
-//        } else {
-//            return PinOnPostCell()
-//        }
-        return tableview.dequeueReusableCellWithIdentifier(PIN_ON_POST_CELL)!
+        if let cell = tableView.dequeueReusableCellWithIdentifier(PIN_ON_POST_CELL) as? PinOnPostCell {
+            
+            //cancle early request when reuse cell.
+            cell.request?.cancel()
+            
+            //try get stored image from cache.
+            var image: UIImage?
+            if let url = po.postImgUrl {
+                image = PostVC.imageCache.objectForKey(url) as? UIImage
+            }
+            
+            cell.configureImgCell(po, img: image)
+            return cell
+        } else {
+            return PinOnPostCell()
+        }
     }
 }
 

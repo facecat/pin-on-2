@@ -12,7 +12,7 @@ class PinOnPost {
     
     private var _userName: String!
     private var _postDescription: String!
-    private var _postImg: String?
+    private var _postImgUrl: String?
     private var _likesNum: Int!
     private var _postKey: String!
     
@@ -32,14 +32,14 @@ class PinOnPost {
         return _postDescription
     }
     
-    var postImg: String? {
-        return _postImg
+    var postImgUrl: String? {
+        return _postImgUrl
     }
     
     //Creat a post
     init(desc: String, img: String?, username: String) {
         _postDescription = desc
-        _postImg = img
+        _postImgUrl = img
         _userName = username
     }
     
@@ -51,16 +51,19 @@ class PinOnPost {
             _likesNum = likes
         }
         
-        if let name = dict["username"] as? String {
-            _userName = name
-        }
+//        if let name = dict["username"] as? String {
+//            _userName = name
+//        }
+        
+        //use fake data for user name
+        _userName = "facecat test 11"
         
         if let desc = dict["description"] as? String {
             _postDescription = desc
         }
         
         if let img = dict["imageUrl"] as? String {
-            _postImg = img
+            _postImgUrl = img
         }
     }
 }
